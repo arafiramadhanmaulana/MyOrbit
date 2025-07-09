@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'TelkomselBatikSans';
+  src: url('/fonts/telkomsel/TelkomselBatikSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TelkomselBatikSans';
+  src: url('/fonts/telkomsel/TelkomselBatikSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+:root {
+  --tc-red: #ff0025;
+  --tc-red-dark: #680024;
+  --tc-navy: #001a41;
+  --tc-orange: #fca12b;
+  --tc-white: #ffffff;
+  --tc-gray: #dadada;
+  --tc-text: #333;
+  --tc-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.font-batik {
+  font-family: 'TelkomselBatikSans', sans-serif;
+  font-weight: bold;
+}
+
+.right-column-rounded {
+  border-top-left-radius: 2rem;  
+  border-bottom-left-radius: 2rem;
+}

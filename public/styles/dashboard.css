@@ -1,0 +1,156 @@
+body {
+font-family: 'TelkomselBatikSans', sans-serif;
+font-size: 0.875rem;
+background: linear-gradient(120deg, #8e0b2c, #b31536, #ff0025, #f8573c, #fca12b);
+margin: 0;
+padding: 0;
+overflow-y: auto;
+height: 100%;
+}
+#resultPage {
+font-family: 'Poppins', sans-serif;
+overflow: visible !important;
+}
+.chart-container {
+max-width: 240px;
+margin: 0 auto;
+}
+.chart-value {
+margin-top: 0.5rem;
+color: #374151;
+font-weight: 500;
+font-size: inherit;
+}
+table {
+width: 100%;
+border-spacing: 0; 
+border-collapse: separate; 
+font-size: inherit;
+transform-origin: center;
+}
+th, td {
+border: 1px solid #000000;
+padding: 0.25rem;
+text-align: center;
+font-size: inherit;
+}
+th {
+background-color: #ffffff;
+font-weight: 600;
+}
+.table-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+.bg-white table {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-size: inherit;
+}
+.bg-white {
+padding: 0.75rem !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: inherit;
+}
+@font-face {
+font-family: 'Poppins';
+src: url('/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'Poppins';
+src: url('/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+font-weight: 700;
+}
+
+@font-face {
+font-family: 'TelkomselBatikSans';
+src: url('/fonts/telkomsel/TelkomselBatikSans-Regular.ttf') format('truetype');
+font-weight: normal;
+}
+
+@font-face {
+font-family: 'TelkomselBatikSans';
+src: url('/fonts/telkomsel/TelkomselBatikSans-Bold.ttf') format('truetype');
+font-weight: bold;
+}
+.scroll-table th,
+.scroll-table td {
+white-space: nowrap;
+padding: 0.5rem;
+text-align: center;
+font-size: 0.75rem;
+}
+
+
+.scroll-table {
+width: max-content;
+min-width: 100%;
+}
+.scroll-table-wrapper {
+overflow: visible;
+width: 100%;
+max-height: none;
+border-radius: 0;
+box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+html {
+scroll-behavior: smooth;
+}
+.scroll-table thead {
+position: sticky;
+top: 0;
+background-color: #ffffff; 
+z-index: 20;
+}
+.scroll-table thead th {
+position: sticky;
+top: 0;
+background-color: #ffffff;
+z-index: 10;
+padding-top: 9px;     
+padding-bottom: 4px;
+line-height: 1.1;
+font-size: 0.7rem;     
+}
+@media (max-width: 768px) {
+.scroll-table-wrapper {
+    overflow-x: auto;
+    overflow-y: auto; 
+    max-height: 400px;
+    border-radius: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative; 
+}
+
+.scroll-table {
+    min-width: 600px;
+    width: max-content;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.scroll-table th,
+.scroll-table td {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+.scroll-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    font-size: 0.7rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #000; 
+}
+}

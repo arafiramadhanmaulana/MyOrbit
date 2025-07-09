@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk – Orbit Telkomsel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/login.css" />
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-white">
+  <!-- LAYOUT DEKSTOP -->
+  <div class="hidden md:flex w-full min-h-screen flex-col md:flex-row">
+    <!-- Kolom Kiri -->
+    <div class="md:w-1/2 relative flex flex-col items-center justify-start pt-[5vh] px-[4vw] text-white overflow-hidden"
+         style="background: linear-gradient(to bottom, #680024, #ff0025);">
+      <!-- Logo Telkomsel Orbit (pojok kiri atas) -->
+      <img src="images/Telkomsel-Orbit-Logo-White.png" 
+           alt="Telkomsel Orbit" 
+           class="absolute top-[3%] left-[3%] w-[13%] z-20" />
+      <!-- Teks -->
+      <div class="z-10 text-center max-w-md mt-[10%] font-batik">
+        <h2 class="text-3xl leading-tight font-bold">
+          Internet Cepat Praktis<br>di Dalam dan Luar Rumah
+        </h2>
+      </div>
+      <!-- Gambar Produk -->
+      <img src="images/product.png" 
+           class="absolute z-20 w-[20vw] max-w-[240px] object-contain bottom-[12%] left-[14%]" />
+      <!-- Background KV -->
+      <img src="images/belahketupat.png" alt="Keluarga"
+           class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[0.55] z-0" />
+      <!-- Logo by Telkom Indonesia (pojok kanan bawah) -->
+      <img src="images/by-Telkom-Indonesia.png" 
+           alt="by Telkom Indonesia" 
+           class="absolute bottom-[2%] right-[2.5%] w-[20vw] max-w-[160px] z-20 opacity-90" />
+    </div>
+
+    <!-- Kolom Kanan (Bagian form login referral) -->
+    <div class="md:w-1/2 flex items-center justify-center bg-white px-10 rounded-l-3xl">
+      <div class="w-full max-w-md space-y-8">
+        <!-- Judul halaman login -->
+        <div class="text-left">
+          <h1 class="text-3xl font-bold text-red-600 font-batik">Selamat Datang</h1>
+          <p class="text-gray-600 mt-2">Masukkan kode referral Anda untuk melihat progres penjualan.</p>
+        </div>
+        <!-- Form login menggunakan kode referral -->
+        <form id="loginForm" class="space-y-5">
+          <!-- Input username tersembunyi (dibutuhkan untuk autocomplete browser) -->
+          <input type="text" name="username" autocomplete="username" hidden>
+          <!-- Input kode referral dengan tombol toggle password -->
+          <div class="relative">
+            <input id="code" name="referralCode" type="password" autocomplete="new-password" placeholder="Kode Referral" required
+              class="w-full border border-gray-300 rounded-lg py-3 px-4 pr-12 focus:ring-2 focus:ring-red-500 outline-none shadow-sm placeholder-gray-400" />
+            <!-- Tombol toggle visibilitas password (mata buka/tutup) -->
+            <button type="button" id="togglePassword"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+              <svg id="eyeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 
+                      8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 
+                      7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+          </div>
+          <!-- Tombol submit form login dengan kode referral -->
+          <button type="submit"
+            class="w-full bg-red-600 text-white font-semibold py-3 rounded-lg transition hover:bg-red-700 text-lg shadow-md">
+            Login
+          </button>
+          <!-- Pesan error jika login gagal -->
+          <p id="errorMsg" class="text-sm text-red-600 text-center"></p>
+        </form>
+        <!-- Copyright -->
+        <p class="text-center text-xs text-gray-400">© 2025 Orbit Telkomsel. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYOUT MOBILE -->
+  <div class="block md:hidden min-h-screen flex flex-col bg-white">
+    <!-- Bagian gambar atas (50%) -->
+    <div class="h-[50vh] w-screen flex items-center justify-center bg-gradient-to-b from-[#680024] to-[#ff0025] relative overflow-hidden">
+      <!-- Logo kiri atas -->
+      <img src="images/Telkomsel-Orbit-Logo-White.png" alt="Logo"
+        class="absolute top-[4%] left-[4%] w-[25%] max-w-[70px] z-20" />
+      <!-- Teks tengah -->
+      <div class="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-20 px-[5%] w-full">
+        <h2 class="text-sm font-bold leading-snug">
+          Internet Cepat Praktis<br />
+          di Dalam dan Luar Rumah
+        </h2>
+      </div>
+      <!-- Gambar Produk (di bawah teks) -->
+      <img src="images/product.png"
+        class="absolute z-20 w-[40vw] max-w-[240px] object-contain bottom-[15%] left-[14%]" />
+      <!-- Background KV -->
+      <img src="images/belahketupat.png" alt="Keluarga"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[0.6] z-0" />
+      <!-- Logo by Telkom Indonesia -->
+      <img src="images/by-Telkom-Indonesia.png"
+          alt="by Telkom Indonesia"
+          class="absolute bottom-[3%] right-[5%] w-[28%] max-w-[120px] z-10 opacity-80" />
+    </div>
+
+    <!-- Bagian form bawah 50%) -->
+    <div class="flex-1 px-6 py-8 bg-white flex flex-col justify-center space-y-6">
+      <!-- Judul dan deskripsi login -->
+      <div>
+        <h1 class="text-2xl font-bold text-red-600 font-batik">Selamat Datang</h1>
+        <p class="text-sm text-gray-600 mt-1">Masukkan kode referral Anda</p>
+      </div>
+      <!-- Form login untuk tampilan mobile menggunakan kode referral -->
+      <form id="mobileLoginForm" class="space-y-4">
+        <!-- Input username tersembunyi untuk kebutuhan autocomplete -->
+        <input type="text" name="username" autocomplete="username" hidden>
+        <!-- Input kode referral -->
+        <input id="mobileCode" type="password" autocomplete="new-password" required placeholder="Kode Referral"
+              class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:ring-2 focus:ring-red-500 outline-none shadow-sm" />
+        <!-- Tombol submit form login versi mobile -->
+        <button type="submit"
+                class="w-full bg-red-600 text-white font-semibold py-3 rounded-lg transition hover:bg-red-700 text-lg shadow-md">
+          Login
+        </button>
+        <!-- Pesan error jika kode salah atau login gagal -->
+        <p id="mobileError" class="text-sm text-red-600 text-center"></p>
+      </form>
+      <!-- Copyright -->
+      <p class="text-center text-xs text-gray-400">© 2025 Orbit Telkomsel. All rights reserved.</p>
+    </div>
+
+  <script src="js/index.js" defer></script>
+
+</body>
+</html>
